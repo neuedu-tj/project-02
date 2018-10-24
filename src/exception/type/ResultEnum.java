@@ -1,11 +1,8 @@
-package cases.exception.type;
+﻿package cases.exception.type;
 
 public enum ResultEnum {
 
-    SUCCESS(1 , "ok ") ,
-    ERROR_UNKNOWN(-1 , "unknown error"),
-    ERROR_LOWSTOCK(2 , " low stock error "),
-    ERROR_DOWN(3 , " 产品已经下架 ");
+   //这是我修改的内容
 
 
     private Integer code;
