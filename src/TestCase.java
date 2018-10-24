@@ -16,13 +16,13 @@ public class TestCase {
 
 
 
-        String STANDARD_DATE_FORMAT_UTC = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-        Calendar date = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat(STANDARD_DATE_FORMAT_UTC);
-        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-        String createdDateTime = "2018-10-23T01:51:43Z";
-        Date dateTime =sdf.parse(createdDateTime);
-        System.out.println(dateTime);
+        // String STANDARD_DATE_FORMAT_UTC = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+        // Calendar date = Calendar.getInstance();
+        // SimpleDateFormat sdf = new SimpleDateFormat(STANDARD_DATE_FORMAT_UTC);
+        // sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+        // String createdDateTime = "2018-10-23T01:51:43Z";
+        // Date dateTime =sdf.parse(createdDateTime);
+        // System.out.println(dateTime);
 
 
     }
