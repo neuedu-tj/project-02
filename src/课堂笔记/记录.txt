@@ -1,0 +1,64 @@
+1. 多态可以用来做什么?
+2. 接口和抽象类的区别?
+3. split() / String / StringBuffer   / "java;oracle;spark;hadoop" --->  info ---> info.split(";") --> ["java" , 'oracle'..........]
+4. List/Set |  有序, 无序 --> set.get(i) ? | iterator
+5. ArrayList / LinkedList / 如果要提高Arraylist效率该如何？
+6. 1byte=8bit   ---> unicode --> A 65 / /u0041  
+7. 提取身份证号中生日部分   subString
+8. 如何给List<Stu> 进行排序 ; Stu(id,name,age);	Compareable(I); Comparator(I) ; Collections.sort(list)
+9. short+char ?  类型转换  byte,short,char---> int
+10. Integer , int 当接受空值的时候会输出什么 
+--->  	int age = request.getParmater("age") -> 0
+	Integer age = request.getParmater("age") -> null
+| (
+	String-->char[] , final
+	Date--> long ,  new Date(0) ->  1970-01-01 08:00 -> 计算机纪元年
+	Integer -> 
+
+		int a = 10;
+		int b = 10;
+		a==b? true
+
+		Integer a = 10;
+		Integer b = 10;
+		a==b?	true
+
+		Integer a = 1000;   (-128~127)
+		Integer b = 1000;
+		a==b?	false
+		
+
+		String a = "10"; new String("10")
+		String b = "10"; new String("10")
+		a==b? true		
+)
+
+11. Bean 重写 equals 的意义 .  -->   Book p1 , p2     p1.equals(p2) -> t/f ?   isbn
+
+
+
+SQL
+1. 左外链接   --> 缺考 
+2. 手写JDBC
+3. 如何菜单->自连接	--> Emp   
+
+Web
+1. 绝对定位/相对定位   
+2. block / inline-block   
+3. 居中?  margin: 0 auto / 纵向
+JavaWeb
+1. 如何让cookie过期   setAge(0)  . response.addcookie(a)
+2. 如何处理乱码		post-> filter > 
+3. 304(缓存 / ctrl+f5 ),200(ok),404(url ?),405(post / doget),500(代码错了)
+4. JSP 编译后存放在 tomcat  什么地方 ?    webapp-->demo/classes/src/bean+servlet
+						work->   index.jsp --? index_jsp.java 
+JS
+1. JavaScript 数据类型   
+2. 事件冒泡
+3. 表单提交验证    
+4. 超链接如何绑定事件     <a href="-->"  onclick="xxx" />
+
+-----------------------------------------------
+
+屈新满 / 2 / 1 /  住在外面8点到基地 , 住在河北路程往返消耗2小时 / 打代码可以 , 还欠缺熟练度
+
