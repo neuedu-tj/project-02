@@ -1,8 +1,7 @@
 ﻿package cases.exception.type;
 
 public enum ResultEnum {
-
-   //这是我修改的内容
+//测试修改
 
 
     private Integer code;
