@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        .border {
+            border: 1px solid crimson;
+        }
+        #wrap {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+
+
+            height: 400px;
+            width: 500px;
+
+            padding: 20px;
+        }
+
+        #search {
+            height: 40px;
+            width: 200px;
+            text-indent:  4px;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            color: slategray;
+        }
+
+        #results {
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .item {
+            height: 30px;
+             font-family: 微软雅黑;
+            font-size: 16px;
+            color: slategray;
+            margin: 2px;
+            text-indent:  4px;
+            line-height: 30px;
+        }
+
+        .item-foucs {
+            background-color: deepskyblue;
+        }
+
+        .item-blur{
+            background-color: lightblue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="wrap" class="border">
+
+        <input id="search" value="">
+        <div id="results" class="border">
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+<script src="../../lib/js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+    let  storage = ['java' , 'javascript' , 'javaee' , 'javase' , 'javaweb' , 'node.js' , 'css' , 'c++' , 'c#'];
+
+    $(function(){
+
+            $("#search").keyup(function(){
+
+                if(event.keyCode == 38) {
+                    console.log("👆")
+                } else if( event.keyCode == 40 ) {
+                    console.log("👇")
+                } else  if( event.keyCode == 13 ) {
+                    console.log("回车")
+                } else {
+
+                    let key = String.fromCharCode(event.keyCode);
+
+                    let result = search(key.toLowerCase());
+
+                     buildItem(result);
+                }
+            })
+
+
+    });
+
+    function buildItem( result ) {
+
+        clearChildren($("#results"));
+
+        $.each(result , function(index , element) {
+
+            let item = $("<div>"+element+"</div>");
+            item.addClass("item").addClass("item-blur");
+
+            item.mouseover(function(){
+                $(this).removeClass("item-blur").addClass("item-foucs");
+            });
+            item.mouseout(function(){
+                $(this).removeClass("item-foucs").addClass("item-blur");
+            });
+            item.click(function(){
+
+                $("#search").val($(this).html());
+
+                clearChildren($("#results"));
+            });
+
+            $("#results").append(item)
+        });
+    }
+
+    function search(key) {
+        let result = [];
+
+        $.each(storage , function(index , element){
+            if(element.indexOf(key) != -1) {
+                result.push(element);
+            }
+        });
+        return result.sort();
+    }
+
+    function clearChildren( target ) {
+        target.empty();
+    }
+
+
+
+</script>
