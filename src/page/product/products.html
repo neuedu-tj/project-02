@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .mark {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div id="product">
+
+        Name : <input v-model="product.pname"><br>
+        Price : <input v-model="product.price"><br>
+        Description : <input v-model="product.description"><br>
+
+        <input type="button" value="save Product" @click="saveProduct">
+        <hr>
+
+        <table border="1" style="background-color: beige" align="center" width="500px">
+
+            <tr>
+                <td>pid</td>
+                <td>pname</td>
+                <td>price</td>
+                <td>description</td>
+                <td>controll</td>
+            </tr>
+
+            <tr v-for="data in products">
+                <td>{{data.pid}}</td>
+                <td>{{data.pname}}</td>
+                <td>
+                    <span v-if="data.price<100">
+                        <div class="mark">{{data.price}}</div>
+                    </span>
+                    <span v-else-if="data.price>=100">
+                        <div >{{data.price}}</div>
+                    </span>
+
+                </td>
+                <td>{{data.description}}</td>
+
+                <td><a @click="removeProduct(data)">remove</a></td>
+            </tr>
+
+            
+        </table>
+
+    </div>
+
+</body>
+</html>
+
+<script src="../../node_modules/vue/dist/vue.js" ></script>
+<script src="../../node_modules/vue-resource/dist/vue-resource.js"></script>
+<script src="js/products.js"></script>
