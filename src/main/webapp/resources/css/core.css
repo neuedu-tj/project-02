@@ -1,0 +1,39 @@
+@CHARSET "UTF-8" ;
+h3 { color:threedshadow;}
+h4 code{ color: olive;}
+#message{
+	position:relative;
+	float: right;
+	right: 50px;
+	border-radius: 10px; 
+	background-color:#E8F9F7;
+	width: 600px; 
+	height: 150px;
+	padding-left : 10px;
+	color: #6a6a6a;
+}
+
+.textLink {
+	text-decoration: none ;
+	color: #ac3d12;
+}
+.writeXmlLink {
+	text-decoration: none ;
+	color: #ac3d1a;
+}
+.writeJsonLink {
+	text-decoration: none ;
+	color: #ac3d1a;
+}
+
+#content {
+	border-radius: 10px; 
+	float : left;
+	background-color: #F7E9D6;
+	width: 550px;
+	
+}
+#content li{
+	
+}
+
